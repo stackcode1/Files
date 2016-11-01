@@ -1,0 +1,6 @@
+gpg -o parth.gpg --export parth
+gpg --import parth.gpg
+vi pp.txt
+gpg -o signs.sig --sign pp.txt
+gpg -o batch.gpg -r parth --encrypt pp.txt
+gpg -o aa.txt --decrypt batch.gpg
